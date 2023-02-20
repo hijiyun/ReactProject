@@ -24,14 +24,7 @@ function App() {
       <div className="list">
         <h3>
           {글제목[0]}{" "}
-          <span
-            onClick={() => {
-              하트변경(하트 + 1);
-            }}
-          >
-            💙
-          </span>{" "}
-          {하트}{" "}
+          <span onClick={() => {하트변경(하트 + 1);}}>💙</span>{" "}{하트}{" "}
         </h3>
         <p>2월 17일 발행</p>
         <hr />
@@ -43,14 +36,19 @@ function App() {
         <hr />
       </div>
 
-      <div>
+      <Model></Model>
+
+    </div>
+  );
+}
+function Model() {
+  return (
+    <div className="model">
         <h2>제목</h2>
         <p>날짜</p>
         <p>상세 내용</p>
       </div>
-
-    </div>
-  );
+  )
 }
 
 export default App;
