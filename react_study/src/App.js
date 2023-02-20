@@ -9,7 +9,9 @@ function App() {
   let [하트, 하트변경] = useState(0);
   let posts = "강남 고기 맛집 리스트";
   function 제목바꾸기() {
-    글제목변경(["남자 봄 옷 추천", "강남 우동 맛집", "남자 봄 옷 추천"]);
+    var newArray = [...글제목];
+    newArray[0] = '남자 봄 옷 추천'
+    글제목변경(newArray);
   }
   return (
     <div className="App">
