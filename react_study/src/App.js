@@ -8,11 +8,13 @@ function App() {
   let [글제목, 글제목변경] = useState(['여자 봄 옷 추천','강남 우동 맛집','남자 봄 옷 추천']);
   let [하트, 하트변경] = useState(0);
   let posts = "강남 고기 맛집 리스트";
+  
   function 제목바꾸기() {
     var newArray = [...글제목];
     newArray[0] = '남자 봄 옷 추천'
     글제목변경(newArray);
   }
+
   return (
     <div className="App">
       <div className="black-nav">
@@ -40,6 +42,13 @@ function App() {
         <p>2월 19일 발행</p>
         <hr />
       </div>
+
+      <div>
+        <h2>제목</h2>
+        <p>날짜</p>
+        <p>상세 내용</p>
+      </div>
+
     </div>
   );
 }
