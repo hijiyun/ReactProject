@@ -20,7 +20,7 @@ function App() {
       <div className="black-nav">
         <div style={{ color: "pink" }}>개발 Blog</div>
       </div>
-      <button onClick={ 제목바꾸기 }>버튼</button>
+      <button onClick={ 제목바꾸기 } className="button">버튼</button>
       <div className="list">
         <h3>
           {글제목[0]}{" "}
@@ -36,7 +36,7 @@ function App() {
         <hr />
       </div>
 
-      <Model></Model>
+      <Model/>
 
     </div>
   );
