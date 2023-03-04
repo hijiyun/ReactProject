@@ -11,9 +11,18 @@
 </body>
 <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-<script>
+<script type="text/babel">
     const root = document.getElementById('root');
-    const span = React.createElement("span");
-    ReactDom.render(span, root)
+    let counter = 10;
+    function CountUp(){
+        counter = counter + 1;
+    }
+    const Containner = () =>(
+        <div>
+            <h3>Total Clicks: {counter}</h3>
+            <button>Click me</button>
+        </div>
+    );
+    ReactDom.render(<Containner />, root);
 </script>
 </html>
