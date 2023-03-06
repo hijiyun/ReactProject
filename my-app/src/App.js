@@ -1,9 +1,17 @@
 import { useState, useEffect } from "react";
 
 function Hello(){
-  return(
-    <div>Hello</div>
-  );
+  function byfn(){
+    console.log("bye:(");
+  }
+  function hifn(){
+    console.log("created :)");
+    return byfn;
+  }
+  useEffect ((function name(params) {
+    
+  }), []);
+  return <h1>Hello</h1>;
 }
 
 function Show(){
