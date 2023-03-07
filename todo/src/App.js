@@ -2,10 +2,16 @@ import { useState, useEffect } from "react";
 
 function App() {
   const [toDo, setToDo] = useState("");
+  const [toDos, setToDos] = useState([]);
   const onChange = (event) => setToDo(event.target.value);
-  const onSubmit = (event) =>
+  const onSubmit = (event) => {
     event.preventDefault();
-  console.log(toDo);
+    if (toDo === "") {
+      return;
+    }
+    setToDo("");
+    setToDos((currentArray) => [toDo, toDos]);
+  };
   return (
     <div>
       <form onSubmit={onSubmit}>
