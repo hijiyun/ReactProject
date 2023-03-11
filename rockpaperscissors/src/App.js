@@ -1,3 +1,4 @@
+import { useState } from "react";
 import './App.css';
 import Box from "./component/Box"
 
@@ -24,16 +25,19 @@ const choice = {
   },
 }; 
 function App() {
+  const play = (userChoice) => {
+    console.log("선택", userChoice);
+  }
   return (
     <div>
-      <div className='main'>
+      <div className="main">
         <Box title="You" />
-        <Box title="Computer"/>
+        <Box title="Computer" />
       </div>
-      <div className='main'>
-        <button>가위</button>
-        <button>바위</button>
-        <button>보</button>
+      <div className="main">
+        <button onClick={() => play("scissors")}>가위</button>
+        <button onClick={() => play("rock")}>바위</button>
+        <button onClick={() => play("paper")}>보</button>
       </div>
     </div>
   );
