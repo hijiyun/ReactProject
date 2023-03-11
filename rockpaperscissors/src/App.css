@@ -1,3 +1,8 @@
 .box{
-  border: 1px solid black;
+  border: 1px solid rgb(232, 232, 76);
+  width: 500px;
+}
+
+.item-img{
+  width: 200px;
 }
