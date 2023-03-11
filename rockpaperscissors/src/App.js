@@ -30,13 +30,15 @@ function App() {
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
-    let ComputerChoice = randomChoice()
+    let ComputerChoice = randomChoice();
+    setComputerSelsct(ComputerChoice);
   };
   const randomChoice = () => {
     let itemArray = Object.keys(choice); //객체의 키값만 뽑아서 array로 만들어주는 함수이다.
     console.log("item Ayyay: ", itemArray);
-    let randomItem = Math.random()
-    console.log("랜덤값: ",randomItem)
+    let randomItem = Math.floor(Math.random() * itemArray.length);
+    let final = itemArray[randomItem]
+    return choice[final]
   }
   return (
     <div>
