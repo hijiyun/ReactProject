@@ -1,9 +1,9 @@
 import React from "react";
 
-const Box = () => {
+const Box = (props) => {
   return (
     <div className="box">
-      <h1>You</h1>
+      <h1>{props.title}</h1>
       <img
         className="item-img"
         src="https://cdn-icons-png.flaticon.com/512/1499/1499517.png"

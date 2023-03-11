@@ -6,3 +6,8 @@
 .item-img{
   width: 200px;
 }
+
+.main{
+  display: flex;
+  justify-content: center;
+}

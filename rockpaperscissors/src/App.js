@@ -9,11 +9,32 @@ import Box from "./component/Box"
 //6. 승패결과에 따라 테두리 색이 바뀐다. 
 // 이기면-초록, 지면-빨강, 비기면-노랑
 
-
+const choice = {
+  rock: {
+    name: "rock",
+    img: "https://blog.kakaocdn.net/dn/pSJwo/btqXJV1lACE/nx5XrxkCLWXh9UsnoS8vbK/img.png",
+  },
+  paper: {
+    name: "paper",
+    img: "https://blog.kakaocdn.net/dn/bmjB2s/btqXHhp6kpG/TH14W4U612SxKo9uuR2sB0/img.png",
+  },
+  scissors: {
+    name: "scissors",
+    img: "https://blog.kakaocdn.net/dn/HfURw/btqXKvOTNWK/gWTwPXEg9QzSV0ilOuwuak/img.png",
+  },
+}; 
 function App() {
   return (
     <div>
-      <Box />
+      <div className='main'>
+        <Box title="You" />
+        <Box title="Computer"/>
+      </div>
+      <div className='main'>
+        <button>가위</button>
+        <button>바위</button>
+        <button>보</button>
+      </div>
     </div>
   );
 }
