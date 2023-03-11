@@ -1,4 +1,5 @@
 import './App.css';
+import Box from "./component/Box"
 
 //1.박스 2개(타이틀, 사진, 결과)
 //2. 가위바위보 버튼이 박스 아래에 있음
@@ -11,8 +12,8 @@ import './App.css';
 
 function App() {
   return (
-    <div className="">
-
+    <div>
+      <Box />
     </div>
   );
 }
