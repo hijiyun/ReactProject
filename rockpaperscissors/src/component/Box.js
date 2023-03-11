@@ -10,7 +10,7 @@ const Box = (props) => {
         src={props.item && props.item.img}
         alt="가위"
       />
-      <h2>win</h2>
+      <h2>{props.result}</h2>
     </div>
   );
 };

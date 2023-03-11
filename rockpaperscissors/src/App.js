@@ -27,32 +27,53 @@ const choice = {
 function App() {
   const [userSelect, setUserSelect] = useState(null);
   const [ComputerSelsct, setComputerSelsct] = useState(null);
+  const [result, setResult] = useState("");
 
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
     let ComputerChoice = randomChoice();
     setComputerSelsct(ComputerChoice);
+    setResult(judgement(choice[userChoice], ComputerChoice));
   };
-  const randomChoice = () => {
-    let itemArray = Object.keys(choice); //객체의 키값만 뽑아서 array로 만들어주는 함수이다.
-    console.log("item Ayyay: ", itemArray);
-    let randomItem = Math.floor(Math.random() * itemArray.length);
-    let final = itemArray[randomItem]
-    return choice[final]
+
+  const judgement = (user, computer) => {
+    console.log("user:", user, "computer:", computer);
+    
+    //user == computer tie
+    //user == rock, computer == scissors user win
+    // user == rock, computer == paper user lose
+    // ...
+
+    if (user.name == computer.name) {
+      return "tie"
+    } else if (user.name == "rock")
+      return computer.name == "scissors" ? "Win" : "lose"
+    else if (user.name == "scissors")
+      return computer.name == "paper" ? "Win" : "lose"
+    else if (user.name == "paper")
+      return computer.name == "rock" ? "Win" : "lose"
+
+    const randomChoice = () => {
+      let itemArray = Object.keys(choice); //객체의 키값만 뽑아서 array로 만들어주는 함수이다.
+      console.log("item Ayyay: ", itemArray);
+      let randomItem = Math.floor(Math.random() * itemArray.length);
+      let final = itemArray[randomItem]
+      return choice[final]
+    }
+    return (
+      <div>
+        <div className="main">
+          <Box title="You" item={userSelect} result={result} />
+          <Box title="Computer" item={ComputerSelsct} result={result} />
+        </div>
+        <div className="main">
+          <button onClick={() => play("scissors")}>가위</button>
+          <button onClick={() => play("rock")}>바위</button>
+          <button onClick={() => play("paper")}>보</button>
+        </div>
+      </div>
+    );
   }
-  return (
-    <div>
-      <div className="main">
-        <Box title="You" item={ userSelect } />
-        <Box title="Computer" item={ ComputerSelsct } />
-      </div>
-      <div className="main">
-        <button onClick={() => play("scissors")}>가위</button>
-        <button onClick={() => play("rock")}>바위</button>
-        <button onClick={() => play("paper")}>보</button>
-      </div>
-    </div>
-  );
 }
 
 export default App;
