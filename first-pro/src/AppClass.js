@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 
 export default class AppClass extends Component {
-    super(props) {
-        super(props)
-        this.state = {
+    constructor(props) {
+        super(props);
+        this.setstate = {
             counter2: 0,
             num: 1,
-            value:0
-        }
+            value: 0
+        };
     }
     increase = () => {
-        this.setState({counter2:this.state.counter2 + 1})
+        this.setState({ counter2: this.state.counter2 + 1, value: this.state.value + 1, });
     };
 
 
@@ -18,7 +18,7 @@ export default class AppClass extends Component {
     return (
       <div>
         <div>state:{this.state.counter2}</div>
-        <button onClick={increase}>클릭 !</button>
+        <button onClick={this.increase}>클릭 !</button>
       </div>
     );
   }
