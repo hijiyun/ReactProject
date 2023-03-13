@@ -1,5 +1,9 @@
 import './App.css';
 import { useEffect, useState } from "react";
+import WeatherBox from './component/WeatherBox';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import WeatherButton from './component/WeatherButton';
+
 
 
 
@@ -25,7 +29,8 @@ function App() {
     },[])
   return (
     <div>
-      <h1></h1>
+      <WeatherBox />
+      <WeatherButton />
     </div>
   );
 }
