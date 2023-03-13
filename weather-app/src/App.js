@@ -13,8 +13,11 @@ function App() {
     });
   };
 
-  const getWeatherByCurrentLocation =(lat,lon)=>{
+  const getWeatherByCurrentLocation =async(lat,lon)=>{
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b69143c6e8136114ec5ae32406e27954`
+    let response = await fetch(url);
+    let data = await response.json();
+    console.log("data: ",data)
   };
 
   useEffect(() => {
