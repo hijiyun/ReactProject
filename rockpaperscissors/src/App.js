@@ -29,6 +29,9 @@ function App() {
   const [ComputerSelsct, setComputerSelsct] = useState(null);
   const [result, setResult] = useState("");
 
+  const randomChoice = () => {//eslint-disable-line no-unused-vars
+    let itemArray = Object.keys(choice); 
+
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
     let ComputerChoice = randomChoice();
@@ -44,17 +47,15 @@ function App() {
     // user == rock, computer == paper user lose
     // ...
 
-    if (user.name == computer.name) {
+    if (user.name === computer.name) {
       return "tie"
-    } else if (user.name == "rock")
-      return computer.name == "scissors" ? "Win" : "lose"
-    else if (user.name == "scissors")
-      return computer.name == "paper" ? "Win" : "lose"
-    else if (user.name == "paper")
-      return computer.name == "rock" ? "Win" : "lose"
-
-    const randomChoice = () => {
-      let itemArray = Object.keys(choice); //객체의 키값만 뽑아서 array로 만들어주는 함수이다.
+    } else if (user.name === "rock")
+      return computer.name === "scissors" ? "Win" : "lose"
+    else if (user.name === "scissors")
+      return computer.name === "paper" ? "Win" : "lose"
+    else if (user.name === "paper")
+      return computer.name === "rock" ? "Win" : "lose"
+//객체의 키값만 뽑아서 array로 만들어주는 함수이다.
       console.log("item Ayyay: ", itemArray);
       let randomItem = Math.floor(Math.random() * itemArray.length);
       let final = itemArray[randomItem]
