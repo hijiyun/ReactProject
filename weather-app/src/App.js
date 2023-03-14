@@ -1,10 +1,8 @@
-import './App.css';
+import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect, useState } from "react";
-import WeatherBox from './component/WeatherBox';
+import WeatherBox from "./component/WeatherBox";
 import WeatherButton from "./component/WeatherButton";
-
-
 
 function App() {
   const [weather, setWeather] = useState(null);
@@ -17,7 +15,7 @@ function App() {
     });
   };
 
-  const getCurrentWeather = async (lat, lon) => {
+  const getWeatherByCurrentLocation = async (lat, lon) => {
     let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=b69143c6e8136114ec5ae32406e27954&units=metric`;
     let response = await fetch(url);
     let data = await response.json();
