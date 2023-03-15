@@ -12,7 +12,7 @@ const Aboutpage = () => {
     <div>
             <h1>Aboutpage</h1>
             <button onClick={GoToHomepage}>go to Hompage!</button>
-    </div>
+        </div>
     );
 }
 
