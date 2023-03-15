@@ -22,3 +22,19 @@
 .menu-list li{
   padding: 10px;
 }
+
+.search {
+  display: flex;
+  justify-content: flex-end;
+    width: 100px;
+    margin: 0 auto;
+}
+
+
+input {
+    width: 120px;
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    margin: 10px 0;
+    padding: 10px 12px;
+}
