@@ -29,18 +29,13 @@ const Navb = () => {
               <li>{menu}</li>
             ))}
           </ul>
-          <div className="search">
+          <div className="search-box landing-search-box">
             <FontAwesomeIcon icon={faSearch} />
-            <FontAwesomeIcon.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
+            <input type="text" placeholder="제품검색" />
           </div>
         </div>
       </div>
     );
 }
 
-export default Navbar
+export default Navb
