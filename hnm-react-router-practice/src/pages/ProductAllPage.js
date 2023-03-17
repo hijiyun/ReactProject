@@ -17,9 +17,9 @@ const ProductAllPage = () => {
     <div>
       <Container>
         <Row>
-          {productList.map((items) => (
-            <Col md={3} sm={12} key={items.id}>
-              <ProductCard item={ items} />
+          {productList.map((menu) => (
+            <Col lg={3} key={menu.id}>
+              <ProductCard item={menu} />
             </Col>
           ))}
         </Row>

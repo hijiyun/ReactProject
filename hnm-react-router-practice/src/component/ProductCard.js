@@ -1,12 +1,12 @@
     import React from 'react'
 
-    const ProductCard = (items) => {
+    const ProductCard = (item) => {
     return (
       <div>
-        <img src="{items?.img}" alt="card" />
+        <img className='products-card-img' src="{item?.img}" alt="card" />
         <div>Conscious choice</div>
-        <div>{items?.title}</div>
-        <div>₩{items?.price}</div>
+        <div>{item?.title}</div>
+        <div>₩{item?.price}</div>
         <div>신제품</div>
       </div>
     );
