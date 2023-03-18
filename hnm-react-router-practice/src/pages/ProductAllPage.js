@@ -1,32 +1,60 @@
-import React, { useEffect, useState } from 'react'
-import ProductCard from '../component/ProductCard';
-import { Container, Row, Col } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import ProductCard from "../component/ProductCard";
+import { Row, Col, Container, Alert } from "react-bootstrap";
+import { useSearchParams } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { productActions } from "../action/productAction";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+const ProductAll = () => {
+  const [query, setQuery] = useSearchParams();
+  const error = useSelector((state) => state.product.error);
 
-const ProductAllPage = () => {
-  const [productList, setproductList] = useState([]); 
-  const getProducts = async () => {
-    let url = `http://localhost:5000/products`;
-    let response = await fetch(url);
-    let data = await response.json();
-    setproductList(data);
-  }
+  const [searchParams, setSearchParams] = useState({
+    page: query.get("page") || 1,
+    name: query.get("name") || "",
+  });
+  const dispatch = useDispatch();
+  const productList = useSelector((state) => state.product.productList);
+
+  // useEffect(() => {}, []);
   useEffect(() => {
-    getProducts()
-  },[])
+    dispatch(productActions.getProductList({ ...searchParams }));
+  }, [query]);
+  useEffect(() => {
+    if (error && error !== "") {
+      toast.error(error, { theme: "colored" });
+    }
+  }, [error]);
   return (
-    <div>
-      <Container>
+    <Container>
+      {error ? (
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        >
+          {error}
+        </ToastContainer>
+      ) : (
         <Row>
-          {productList.map((menu) => (
-            <Col lg={3} key={menu.id}>
-              <ProductCard item={menu} />
-            </Col>
-          ))}
+          {productList.length > 0 &&
+            productList.map((item) => (
+              <Col md={3} sm={12} key={item.id}>
+                <ProductCard item={item} />
+              </Col>
+            ))}
         </Row>
-      </Container>
-      <ProductCard />
-    </div>
+      )}
+    </Container>
   );
-}
+};
 
-export default ProductAllPage
+export default ProductAll;
