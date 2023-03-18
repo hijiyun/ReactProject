@@ -11,13 +11,14 @@ import AdminProduct from "./page/AdminProduct";
 import { useLocation } from "react-router-dom";
 
 import { userActions } from "./action/userAction";
-import ProductDetail from "./page/ProductDetail";
+import ProductDetail from "./page/ProductDeail";
 function App() {
   const location = useLocation();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.user);
   useEffect(() => {
     dispatch(userActions.loginWithToken());
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div>

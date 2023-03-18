@@ -1,7 +1,7 @@
     import React, { useState, useEffect } from "react";
     import { Form, Modal, Button, Row, Col, Badge } from "react-bootstrap";
     import { useDispatch, useSelector } from "react-redux";
-    import CloudinaryUploadWidget from "../utils/CloudinaryUploadWidget";
+    import CloudinaryUploadWidget from "../util/CloudinaryUploadWidget";
     import { productActions } from "../action/productAction";
     import { CATEGORY, STATUS, SIZE } from "../constants/product.constants";
 

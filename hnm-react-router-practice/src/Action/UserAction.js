@@ -1,4 +1,4 @@
-    import api from "../utils/api";
+    import api from "../util/api";
     import * as types from "../constants/user.constants";
 
     const loginWithToken = () => async (dispatch) => {

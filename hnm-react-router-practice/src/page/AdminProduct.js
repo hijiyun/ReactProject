@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Sidebar from "../component/Sidebar";
-import SearchBox from "../component/SearchBox";
+import SearchBox from "../component/SearchBox.js";
 import { useDispatch, useSelector } from "react-redux";
 import { productActions } from "../action/productAction";
 import NewItemDialog from "../component/NewItemDialog";
