@@ -6,7 +6,7 @@ const WeatherBox = ({weather}) => {
     <div className='weather-box'>
       <div>{weather?.name}</div>
       <h3>온도 : {weather?.main.temp}</h3>
-      <h3>{weather?.weather[0].description}</h3>
+      <h3>미세 먼지 : {weather?.weather[0].description}</h3>
       <h3>습도 : {weather?.main.humidity}</h3>
     </div>
   )
