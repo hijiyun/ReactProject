@@ -33,12 +33,12 @@ function App() {
   }
 
   useEffect(() => {
-    getCrrentLocation(); // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => { 
-    getWeatherByCity()
-  },[city])
+    if (city === "") {
+      getCrrentLocation(); // eslint-disable-next-line react-hooks/exhaustive-deps
+    } else {
+      getWeatherByCity();
+    }
+  }, [city]);
 
   return (
     <div>
