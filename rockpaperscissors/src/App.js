@@ -24,25 +24,44 @@ const choice = {
   },
 };
 function App() {
-  const [userSelect, setUserSelect] = useState();
-  const [computerSelect, setComputerSelect] = useState(null);
-  const [result, setResult] = useState("");
+  // const [userSelect, setUserSelect] = useState();
+  // const [computerSelect, setComputerSelect] = useState(null);
+  // const [result, setResult] = useState("");
   
-  const play = (userChoice) => { //userChoice 는 버튼 온클릭 옆에 있는 매개변수(rock,scissors,paper)를 받을게 필요해서 만든거임
-    setUserSelect(choice[userChoice]); // setUserSelect = choice에서 userChoice를 들고오는 거임
+  // const play = (userChoice) => { //userChoice 는 버튼 온클릭 옆에 있는 매개변수(rock,scissors,paper)를 받을게 필요해서 만든거임
+  //   setUserSelect(choice[userChoice]); // setUserSelect = choice에서 userChoice를 들고오는 거임
+  //   let computerChoice = randomChoice();
+  //   setComputerSelect(computerChoice);
+  //   setResult(judgement(choice[userChoice], computerChoice));
+  // };
+
+  // const randomChoice = () => {
+  //   let itemArray = Object.keys(choice); //객체에 키값만 뽑아서 어레이로 만들어주는 함수다
+  //   console.log("item array", itemArray);
+  //   let randomItem = Math.floor(Math.random() * itemArray.length);
+  //   console.log("random value", randomItem);
+  //   let final = itemArray[randomItem]; //itemArray값에다가 randomItem인덱스 번호를 넣어주면 콘솔에 숫자가 아닌 아이템으로 나온다 
+  //   return choice[final];
+  // };
+
+  const [userSelect, setUserSelect] = useState();
+  const [computerSelect, setComputerSelect] = useState();
+
+  play(userChoice)=> {
+    setUserSelect(choice[userChoice]);
     let computerChoice = randomChoice();
     setComputerSelect(computerChoice);
-    setResult(judgement(choice[userChoice], computerChoice));
-  };
+    
 
-  const randomChoice = () => {
-    let itemArray = Object.keys(choice); //객체에 키값만 뽑아서 어레이로 만들어주는 함수다
-    console.log("item array", itemArray);
+  }
+
+  const randomChoice() => {
+    let itemArray = Object.keys(choice); // choice 키값만
     let randomItem = Math.floor(Math.random() * itemArray.length);
-    console.log("random value", randomItem);
     let final = itemArray[randomItem];
     return choice[final];
-  };
+  }
+
 
   const judgement = (user, computer) => {
     console.log("user", user, "computer", computer);
