@@ -68,10 +68,10 @@ function App() {
         <Box title="You" item={userSelect} result={result} />
         <Box title="Computer" item={computerSelect} result={result} />
       </div>
-      <div className="main">
-        <button onClick={() => play("scissors")}>가위</button>
-        <button onClick={() => play("rock")}>바위</button>
-        <button onClick={() => play("paper")}>보</button>
+      <div className="main-btn">
+        <button className="main-btn1 btn-push btn-size" onClick={() => play("scissors")}>가위</button>
+        <button className="main-btn2 btn-push btn-size" onClick={() => play("rock")}>바위</button>
+        <button className="main-btn3 btn-push btn-size" onClick={() => play("paper")}>보자기</button>
       </div>
     </div>
   );

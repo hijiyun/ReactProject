@@ -18,6 +18,65 @@
   display: flex;
   justify-content: center;
 }
+
+.main-btn{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.btn-push:hover {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.btn-size{
+  width: 100px;
+  height: 60px;
+}
+
+.main-btn1{
+  margin: 10px;
+  padding: 20px;
+  background: #5DC8CD;
+  box-shadow: 0px 5px 0px 0px #1E8185;
+  color: white;
+  border-radius: 20px;
+  border: none;
+}
+
+.main-btn1.btn-push:hover{
+  box-shadow: 0px 0px 0px 0px #1E8185;
+}
+
+.main-btn2{
+  margin: 10px;
+  padding: 20px;
+  background: #FFAA40;
+  box-shadow: 0px 5px 0px 0px #A66615;
+  color: white;
+  border-radius: 20px;
+  border: none;
+}
+
+.main-btn2.btn-push:hover{
+  box-shadow: 0px 5px 0px 0px #A66615;
+}
+
+.main-btn3{
+  margin: 10px;
+  padding: 20px;
+  background: #A74982;
+  box-shadow: 0px 5px 0px 0px #6D184B;
+  color: white;
+  border-radius: 20px;
+  border: none;
+}
+
+.main-btn3.btn-push:hover{
+  box-shadow: 0px 5px 0px 0px #6D184B;
+}
+
 .win {
   border: 10px solid green;
   color: green;
