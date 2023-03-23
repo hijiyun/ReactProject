@@ -12,15 +12,15 @@ import Box from "./component/Box";
 const choice = {
   rock: {
     name: "Rock",
-    img: "https://media.istockphoto.com/photos/stone-pebble-gray-picture-id1288973456?b=1&k=20&m=1288973456&s=170667a&w=0&h=GBGgp4yrZv4ooDBws8yHF24sJ3rkEpObYsBWpVNKFT8=",
+    img: "https://mblogthumb-phinf.pstatic.net/20120708_164/foxmann_1341709963675FIgOC_PNG/img_2.png?type=w2"
   },
   scissors: {
     name: "Scissors",
-    img: "https://www.ikea.com/kr/en/images/products/sy-scissors__0112301_pe263788_s5.jpg?f=s",
+    img: "https://mblogthumb-phinf.pstatic.net/20120708_107/foxmann_13417099635705qnOz_PNG/img_1.png?type=w2"
   },
   paper: {
     name: "Paper",
-    img: "https://www.collinsdictionary.com/images/full/paper_111691001.jpg",
+    img: "https://mblogthumb-phinf.pstatic.net/20120708_97/foxmann_1341709963774AGRm9_PNG/img_3.png?type=w2"
   },
 };
 function App() {
