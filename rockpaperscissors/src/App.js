@@ -28,8 +28,8 @@ function App() {
   const [computerSelect, setComputerSelect] = useState(null);
   const [result, setResult] = useState("");
   
-  const play = (userChoice) => {
-    setUserSelect(choice[userChoice]);
+  const play = (userChoice) => { //userChoice 는 버튼 온클릭 옆에 있는 매개변수(rock,scissors,paper)를 받을게 필요해서 만든거임
+    setUserSelect(choice[userChoice]); // setUserSelect = choice에서 userChoice를 들고오는 거임
     let computerChoice = randomChoice();
     setComputerSelect(computerChoice);
     setResult(judgement(choice[userChoice], computerChoice));
@@ -43,6 +43,7 @@ function App() {
     let final = itemArray[randomItem];
     return choice[final];
   };
+
   const judgement = (user, computer) => {
     console.log("user", user, "computer", computer);
 
@@ -70,9 +71,10 @@ function App() {
         <Box title="Computer" item={computerSelect} result={result} />
       </div>
       <div className="main-btn">
-        <button className="main-btn1 btn-push btn-size" onClick={() => play("scissors")}>가위</button>
+        <button className="main-btn1 btn-push btn-size" onClick={() => play("scissors")}>가위</button> 
         <button className="main-btn2 btn-push btn-size" onClick={() => play("rock")}>바위</button>
         <button className="main-btn3 btn-push btn-size" onClick={() => play("paper")}>보자기</button>
+        {/* play함수를 바로 실행시키기 때문에 콜백 함수<    () => play("매개변수")     >를 써야함 */}
       </div>
     </div>
   );
