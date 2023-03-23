@@ -27,6 +27,7 @@ function App() {
   const [userSelect, setUserSelect] = useState();
   const [computerSelect, setComputerSelect] = useState(null);
   const [result, setResult] = useState("");
+  
   const play = (userChoice) => {
     setUserSelect(choice[userChoice]);
     let computerChoice = randomChoice();
