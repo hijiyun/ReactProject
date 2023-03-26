@@ -3,17 +3,28 @@ import "./App.css";
 import Box from "./component/Box";
 
 function App() {
+  console.log("rnders")
   let counter = 0;
   const [counter2, setCounter2] = useState(0);
+  const [value, setValue] = useState(0);
   const increase = () => {
     counter = counter + 1;
     setCounter2(counter2 + 1);
+    setValue(value+2)
     console.log("counter는: ", counter, "counter2는:", counter2);
   };
 
   useEffect(() => {
     console.log("useEffect1 fireeee");
-  },[]);
+  }, []);
+  
+  useEffect(() => {
+    console.log("useEffect2 Firrrrr",counter2);
+  }, [counter2])
+  
+  useEffect(() => {
+    console.log("다른 내용 하고싶어요", value);
+  }, [value]);
 
   return (
     <div>
