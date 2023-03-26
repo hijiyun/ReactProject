@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import BoxClass from './component/BoxClass';
 
 export default class AppClass extends Component {
@@ -15,9 +15,11 @@ export default class AppClass extends Component {
     this.setState({counter2:this.state.counter2 + 1, value:this.state.value +3})
   };
 
+
   render() {
     return (
       <div>
+        { console.log("render")}
         <div>state:{this.state.counter2}</div>
         <button onClick={this.increase}>클릭 !</button>
         <BoxClass num={ this.state.value} />
