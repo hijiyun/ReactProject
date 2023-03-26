@@ -45,24 +45,17 @@ function App() {
   };
 
   const judgement = (user, computer) => {
+    //judgement(choice[userChoice], computerChoice)
     console.log("user", user, "computer", computer);
-
-    // user == computer tie
-    // user == rock, computer == "scissors" user 이긴거지
-    // user == "rock" computer == paper   user 진거지
-    // user == scissors computer paper    user 이긴거지
-    // user == scissors computer rock     user 진거지
-    // user == paper computer rock   user 이긴거지
-    // user paper computer scissors user 진거지
 
     if (user.name === computer.name) {
       return "tie";
     } else if (user.name === "Rock")
-      return computer.name === "Scissors" ? "win" : "lose";
+      return computer.name === "Scissors" ? "win" : "loser";
     else if (user.name === "Scissors")
-      return computer.name === "Paper" ? "win" : "lose";
+      return computer.name === "Paper" ? "win" : "loser";
     else if (user.name === "Paper")
-      return computer.name === "Rock" ? "win" : "lose";
+      return computer.name === "Rock" ? "win" : "loser";
   };
   return (
     <div>
