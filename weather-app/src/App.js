@@ -12,7 +12,7 @@ function App() {
   const cities = ["paris", "new york", "tokyo", "seoul"];
   
   const getCrrentLocation = () => {
-    navigator.geolocation.getCurrentPosition((position) => {
+    navigator.geolocation.getCurrentPosition((position) => { //매개변수 position 꼭 넣어주기 
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
       getWeatherByCurrentLocation(lat,lon)
@@ -42,6 +42,7 @@ function App() {
   useEffect(() => {
     if (city === "") {
       getCrrentLocation(); // eslint-disable-next-line react-hooks/exhaustive-deps
+    //현재 위치를 가지고 와야 그 기반의 날씨를 가지고 올 수 있으니까 !
     } else {
       getWeatherByCity();
     }
