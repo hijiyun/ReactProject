@@ -5,6 +5,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
+  const menuList = [ '여성','Divided','남성','신생아/유아','아동','H&M HOME', '스포츠','Sale','지속가능성' ]
   return (
     <div>
       <div className="nav-all">
@@ -36,9 +37,16 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faBagShopping} /> <button>쇼핑백</button>
           </div>
         </div>
+        <div className='list'>
+          <div className="menu-list">
+            <ul>
+              {menuList.map((menu) => (
+                <li>{menu}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
-
-      <div></div>
     </div>
   );
 }

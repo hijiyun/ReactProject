@@ -12,6 +12,8 @@ body{
 button{
     font-size: 10px;
     border: none;
+    background-color: transparent;
+    cursor: pointer;
 }
 
 .header-left{
@@ -19,6 +21,7 @@ button{
     position: absolute;
     top: 10px;
     left: 10px;
+    bottom: 20px;
 }
 
 .header-right{
@@ -26,15 +29,34 @@ button{
     justify-content: flex-end;
     font-size: 10px;
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
+    bottom: 20px;
 }
 .header-jump{
     margin: 10px;
 }
 
 .nav-section{
-    top: 10px;
     display: flex;
     justify-content: center;
+    padding-top: 24px
+}
+
+.list{
+    display: grid;
+    grid-template-columns: 10fr 1fr;
+    align-items: end;
+    position: relative;
+    right: 50%;
+    -webkit-transform: translateX(62.8%);
+    transform: translateX(62.8%);
+    min-height: 33px;
+    z-index: 1003;
+}
+
+.menu-list{
+    text-align: center;
+    position: relative;
+    list-style: none;
 }
