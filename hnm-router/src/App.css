@@ -44,19 +44,8 @@ button{
 }
 
 .list{
-    display: grid;
-    grid-template-columns: 10fr 1fr;
-    align-items: end;
-    position: relative;
-    right: 50%;
-    -webkit-transform: translateX(62.8%);
-    transform: translateX(62.8%);
-    min-height: 33px;
-    z-index: 1003;
+    display: flex;
 }
 
 .menu-list{
-    text-align: center;
-    position: relative;
-    list-style: none;
 }
