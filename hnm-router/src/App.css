@@ -44,8 +44,11 @@ button{
 }
 
 .list{
-    display: flex;
+
 }
 
 .menu-list{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
 }
