@@ -7,30 +7,35 @@ import { faBell } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   return (
     <div>
-      <div className='nav'>
-        <div header-left>
-          고객서비스 &nbsp;&nbsp; 뉴스레터 &nbsp;&nbsp; 매장찾기 &nbsp;&nbsp;
-          <FontAwesomeIcon icon={faBell} />
+      <div className="nav-all">
+        <div className="header-left">
+          <button>고객서비스</button>&nbsp;&nbsp;
+          <button>뉴스레터</button> &nbsp;&nbsp;
+          <button>매장찾기</button> &nbsp;&nbsp;
+          <button>
+            <FontAwesomeIcon icon={faBell} />
+          </button>
         </div>
 
-        <div className='nav-section'>
-          <img 
-            width={100}
-            src="https://blog.kakaocdn.net/dn/Yt80C/btqDeJAYUBo/JQbTuukRladq2AUOeqgiEK/img.jpg" alt="hnm로고" />
+        <div className="nav-section">
+          <img
+            width={50}
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png"
+            alt="hnm로고"
+          />
         </div>
 
-        <div header-right>
-          <div>
-            <FontAwesomeIcon icon={faUser} /> &nbsp; 로그인 &nbsp;&nbsp;&nbsp;
+        <div className="header-right">
+          <div className="header-jump">
+            <FontAwesomeIcon icon={faUser} /> <button>로그인</button>
           </div>
-          <div>
-            <FontAwesomeIcon icon={faHeart} /> &nbsp; 즐겨찾기&nbsp;&nbsp;&nbsp;
+          <div className="header-jump">
+            <FontAwesomeIcon icon={faHeart} /> <button>즐겨찾기</button>
           </div>
-          <div>
-            <FontAwesomeIcon icon={faBagShopping} /> &nbsp; 쇼핑백
+          <div className="header-jump">
+            <FontAwesomeIcon icon={faBagShopping} /> <button>쇼핑백</button>
           </div>
         </div>
-
       </div>
 
       <div></div>

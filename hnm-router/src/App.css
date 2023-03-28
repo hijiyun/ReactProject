@@ -1,16 +1,40 @@
-.nav{
+body{
+    font-family: HM Sans Regular,HMSansHebrew-Regular,ヒラギノ角ゴ Pro W3,Hiragino Kaku Gothic Pro,Osaka,メイリオ,Meiryo,ＭＳ Ｐゴシック,MS PGothic,sans-serif;
+    font-weight: 400;
+    text-transform: none;
+    background-color: #faf9f8;
+    color: #222;
 }
-.header-left{
-    border: 1px solid red;
 
+.nav-all{
+    position: relative;
+}
+button{
+    font-size: 10px;
+    border: none;
+}
+
+.header-left{
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 10px;
 }
 
 .header-right{
-    border: 1px solid red;
-
+    display: flex;
+    justify-content: flex-end;
+    font-size: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.header-jump{
+    margin: 10px;
 }
 
 .nav-section{
+    top: 10px;
     display: flex;
-    justify-content: center ;
+    justify-content: center;
 }
