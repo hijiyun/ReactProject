@@ -10,7 +10,7 @@ body{
     position: relative;
 }
 button{
-    font-size: 10px;
+    font-size: 14px;
     border: none;
     background-color: transparent;
     cursor: pointer;
@@ -27,7 +27,7 @@ button{
 .header-right{
     display: flex;
     justify-content: flex-end;
-    font-size: 10px;
+    font-size: 12px;
     position: absolute;
     top: 5px;
     right: 10px;
@@ -40,15 +40,24 @@ button{
 .nav-section{
     display: flex;
     justify-content: center;
-    padding-top: 24px
+    padding-top: 24px;
+}
+
+ul{
+    list-style: none;
+    padding: 20px;
+}
+li{
+    float: left;
+    margin: 10px;
+    cursor: pointer;
 }
 
 .list{
-
+    display: flex;
+    justify-content: center;
 }
 
 .menu-list{
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
+    padding: 13px
 }

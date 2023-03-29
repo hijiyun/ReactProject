@@ -37,6 +37,7 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faBagShopping} /> <button>쇼핑백</button>
           </div>
         </div>
+        </div>
         <div className='list'>
           <div className="menu-list">
             <ul>
@@ -46,7 +47,6 @@ const Navbar = () => {
             </ul>
           </div>
         </div>
-      </div>
     </div>
   );
 }
