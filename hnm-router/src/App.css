@@ -3,6 +3,7 @@ body{
     text-transform: none;
     background-color: #faf9f8;
     color: #222;
+    display: flex;
 }
 
 .nav-all{
@@ -78,4 +79,8 @@ li{
 }
 .search input:focus{
     outline: none;
+}
+
+.item-img{
+    width: 300px;
 }
