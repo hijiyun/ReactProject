@@ -5,12 +5,16 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 
 const Navbar = () => {
-
-  const menuList = [ '여성','Divided','남성','신생아/유아','아동','H&M HOME', '스포츠','Sale','지속가능성' ]
+  const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M HOME', '스포츠', 'Sale', '지속가능성']
+  const navigate = useNavigate()
+  const gotoLogin = () => {
+    navigate("/login");
+  }
   return (
     <div className='nav'>
       <div className="nav-all">
@@ -32,7 +36,7 @@ const Navbar = () => {
         </div>
 
         <div className="header-right">
-          <div className="header-jump">
+          <div className="header-jump" onClick={gotoLogin}>
             <FontAwesomeIcon icon={faUser} /> <button> 로그인 </button>
           </div>
           <div className="header-jump">
