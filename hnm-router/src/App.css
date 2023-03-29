@@ -52,11 +52,30 @@ li{
     cursor: pointer;
 }
 
-.list{
+.nav-second{
     display: flex;
     justify-content: center;
 }
 
 .menu-list{
+    position: relative;
     padding: 13px
+}
+
+.search{
+    position: absolute;
+    right: 50px;
+    top: 102px;
+    border-bottom: 1px solid black;
+    padding: 5px; 
+}
+.search input{
+    border: none;
+    background-color: #faf9f8;
+    margin-left: 2px;
+    padding: 4px 5px 4px 10px;
+    color: #222;
+}
+.search input:focus{
+    outline: none;
 }

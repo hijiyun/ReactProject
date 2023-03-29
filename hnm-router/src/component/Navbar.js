@@ -4,6 +4,9 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+
+
 const Navbar = () => {
   const menuList = [ '여성','Divided','남성','신생아/유아','아동','H&M HOME', '스포츠','Sale','지속가능성' ]
   return (
@@ -38,13 +41,17 @@ const Navbar = () => {
           </div>
         </div>
         </div>
-        <div className='list'>
+
+        <div className="nav-second">
           <div className="menu-list">
             <ul>
               {menuList.map((menu) => (
                 <li>{menu}</li>
               ))}
             </ul>
+          </div>
+          <div className='search'>
+          <FontAwesomeIcon icon={faMagnifyingGlass} /><input type="text" placeholder='제품 검색' />
           </div>
         </div>
     </div>
