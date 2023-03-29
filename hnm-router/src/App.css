@@ -9,6 +9,7 @@ body{
 
 .nav-all{
     position: relative;
+    width: 1280px;
 }
 button{
     font-size: 14px;
@@ -83,11 +84,10 @@ li{
 }
 
 .item-img{
-    width: 100px;
+    width: 300px;
 }
 
 .item-card{
     width: 100vh;
-    display: flex;
     justify-content: center;
 }

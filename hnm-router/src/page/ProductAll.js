@@ -16,11 +16,13 @@ const ProductAll = () => {
   return (
     <div>
       <Container>
-        {productList.map((menu)=>(
           <Row>
-            <Col lg={3}> <ProductCard item={menu}/> </Col>
+            {productList.map((menu)=>(
+            <Col lg={3}> 
+              <ProductCard item={menu}/> 
+            </Col>
+            ))}
           </Row>
-        ))}
       </Container>
       <ProductCard />
     </div>
