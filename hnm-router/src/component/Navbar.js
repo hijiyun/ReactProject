@@ -40,8 +40,6 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faBagShopping} /> <button>쇼핑백</button>
           </div>
         </div>
-        </div>
-
         <div className="nav-second">
           <div className="menu-list">
             <ul>
@@ -53,6 +51,7 @@ const Navbar = () => {
           <div className='search'>
           <FontAwesomeIcon icon={faMagnifyingGlass} /><input type="text" placeholder='제품 검색' />
           </div>
+        </div>
         </div>
     </div>
   );
