@@ -7,7 +7,9 @@ import { faBell } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 
+
 const Navbar = () => {
+
   const menuList = [ '여성','Divided','남성','신생아/유아','아동','H&M HOME', '스포츠','Sale','지속가능성' ]
   return (
     <div className='nav'>
@@ -31,7 +33,7 @@ const Navbar = () => {
 
         <div className="header-right">
           <div className="header-jump">
-            <FontAwesomeIcon icon={faUser} /> <button>로그인</button>
+            <FontAwesomeIcon icon={faUser} /> <button> 로그인 </button>
           </div>
           <div className="header-jump">
             <FontAwesomeIcon icon={faHeart} /> <button>즐겨찾기</button>
