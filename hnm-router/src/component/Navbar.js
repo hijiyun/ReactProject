@@ -10,7 +10,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 const Navbar = () => {
   const menuList = [ '여성','Divided','남성','신생아/유아','아동','H&M HOME', '스포츠','Sale','지속가능성' ]
   return (
-    <div>
+    <div className='nav'>
       <div className="nav-all">
         <div className="header-left">
           <button>고객서비스</button>&nbsp;&nbsp;

@@ -15,7 +15,7 @@ const ProductAll = () => {
   },[])
   return (
     <div>
-      <Container>
+      <Container className='container'>
           <Row>
             {productList.map((menu)=>(
             <Col lg={3}> 
