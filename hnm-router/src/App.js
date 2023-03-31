@@ -6,6 +6,7 @@ import Login from './page/Login';
 import ProductDetail from './page/ProductDetail';
 import Navbar from './component/Navbar';
 import { useEffect, useState } from 'react';
+import PrivateRoute from './route/PrivateRoute';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
           path="/Login"
           element={<Login setAuthenticate={setAuthenticate} />}
         />
-        <Route path="/Product/:id" element={<ProductDetail />} />
+        <Route path="/Product/:id" element={<PrivateRoute />} />
       </Routes>
     </div>
   );
