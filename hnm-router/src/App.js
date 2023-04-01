@@ -23,7 +23,10 @@ function App() {
           path="/Login"
           element={<Login setAuthenticate={setAuthenticate} />}
         />
-        <Route path="/Product/:id" element={<PrivateRoute />} />
+        <Route
+          path="/Product/:id"
+          element={<PrivateRoute authenticate={authenticate} />}
+        />
       </Routes>
     </div>
   );
