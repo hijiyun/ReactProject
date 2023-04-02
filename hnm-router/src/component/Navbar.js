@@ -16,6 +16,9 @@ const Navbar = () => {
   const gotoLogin = () => {
     navigate("/login");
   }
+  const gotoHome = () => {
+    navigate("/");
+  }
   return (
     <div className='nav'>
       <div className="nav-all">
@@ -30,9 +33,11 @@ const Navbar = () => {
 
         <div className="nav-section">
           <img
+            className='logo'
             width={50}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png"
             alt="hnm로고"
+            onClick={gotoHome}
           />
         </div>
 
