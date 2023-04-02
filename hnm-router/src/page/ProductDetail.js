@@ -1,8 +1,9 @@
 import React from 'react'
+import { Navigate } from 'react-router-dom'
 
-const ProductDetail = () => {
+const ProductDetail = ({authenticate}) => {
   return (
-    <div>상품 ㅣ테일 페이지</div>
+    authenticate === true?<ProductDetail /> : <Navigate to="/login"/>
   )
 }
 
