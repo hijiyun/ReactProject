@@ -7,14 +7,14 @@ const ProductCard = ({item}) => {
     navigate(`/Product/${item.id}`);
   }
   return (
-    <div className='item-card' onClick={showDetail}>
-        <img className='item-img' src={item?.img} alt="item.img"/>
-        <div>{item?.choice}</div>
-        <div>{item?.title}</div>
-        <div>{item?.price}</div>
-        <div>신제품</div>
+    <div className="item-card" onClick={showDetail}>
+      <img className="item-img" src={item?.img} alt="item.img" />
+      <div className="choice">{item?.choice ? "Conscious choice" : ""}</div>
+      <div>{item?.title}</div>
+      <div>{item?.price}</div>
+      <div>{item?.new ? "new":""}</div>
     </div>
-  )
+  );
 }
 
 export default ProductCard
