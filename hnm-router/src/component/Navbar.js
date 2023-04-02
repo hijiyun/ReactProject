@@ -5,7 +5,8 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { Navigate, useNavigate } from 'react-router-dom';
+//eslint-disable-next-line 
+import { Navigate, useNavigate } from 'react-router-dom'; 
 
 
 
