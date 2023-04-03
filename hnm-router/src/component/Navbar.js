@@ -23,9 +23,9 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
     "지속가능성",
   ];
   const navigate = useNavigate();
-  const gotoLogin = () => {
-    navigate("/login");
-  };
+  // const gotoLogin = () => {
+  //   navigate("/login");
+  // };
   const gotoHome = () => {
     navigate("/");
   }
@@ -65,7 +65,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
               <FontAwesomeIcon icon={faUser} /> <button> 로그아웃 </button>
             </div>
           ) : (
-            <div onClick={() => navigate("/login")}>
+            <div className="header-jump" onClick={() => navigate("/login")}>
               <FontAwesomeIcon icon={faUser} /> <button> 로그인 </button>
             </div>
           )}
@@ -86,16 +86,13 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           </div>
           <div className="search">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
-            <input type="text" placeholder="제품 검색" />
-          <div className='search'>
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
-          <input type="text" 
-          placeholder='제품 검색'
-          onKeyDown={(Event)=>search(Event)}
-          />
+            <input
+              type="text"
+              placeholder="제품 검색"
+              onKeyDown={(Event) => search(Event)}
+            />
           </div>
         </div>
-      </div>
       </div>
     </div>
   );
