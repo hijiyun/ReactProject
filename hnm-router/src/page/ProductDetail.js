@@ -8,7 +8,7 @@ const ProductDetail = () => {
   let {id} = useParams();
   const [product, setProduct] = useState(null);
   const getProductDetail = async() => {
-    let url = `https://my-json-server.typicode.com/legobitna/hnm-react-router/products/${id}`;
+    let url = `https://my-json-server.typicode.com/hijiyun/hnm-json-server/products/${id}`;
     let response = await fetch(url);
     let data = await response.json();
     console.log(data);
@@ -43,6 +43,7 @@ const ProductDetail = () => {
           </Dropdown>
 
           <Button id="product-btn" variant="dark">추가</Button>
+          <Button id="product-btn" variant="dark">쇼핑백 담기</Button>
         </Col>
       </Row>
     </Container>
