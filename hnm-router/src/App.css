@@ -109,13 +109,31 @@ li{
     justify-content: center;
 }
 
+.product-all{
+    position: relative;
+}
+
 .product-img{
     display: flex;
     justify-content: flex-end;
-    border: 1px solid red;
-
+}
+.product-content{
+    position: relative;
+    top: 100px;
+    left: 30px;
 }
 
-.product-content{
-    border: 1px solid red;
+.product-choice{
+    font-size: 2px;
+    padding-bottom: 20px;
+}
+#dropdown-basic{
+    background-color: #faf9f8  !important;
+    color: #222 !important;
+    border-radius: 0%;
+    margin-bottom: 15px;
+}
+#product-btn{
+    width: 450px;
+    border-radius: 0px;
 }
