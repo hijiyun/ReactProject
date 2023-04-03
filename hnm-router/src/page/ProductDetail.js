@@ -6,6 +6,8 @@ import Button from 'react-bootstrap/Button';
 
 const ProductDetail = () => {
   let { id } = useParams();
+  const [size, setSize] = useState(false); 
+  console.log("size",size)
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -37,14 +39,14 @@ const ProductDetail = () => {
               {product?.choice ? "Conscious choice" : ""}
             </div>
             <Dropdown>
-              <Dropdown.Toggle variant="dark" id="dropdown-basic">
+              <Dropdown.Toggle variant="dark" id="dropdown-basic" >
                 사이즈 선택
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
                 {product?.size.length > 0 &&
                   product.size.map((item) => (
-                    <Dropdown.Item href="#/action-1">{ item }</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1" onClick={()=>setSize(false)}>{item}</Dropdown.Item>
                   ))}
               </Dropdown.Menu>
             </Dropdown>

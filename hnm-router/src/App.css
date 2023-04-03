@@ -128,13 +128,14 @@ li{
     padding-bottom: 20px;
 }
 #dropdown-basic{
+    width: 400px;
     background-color: #faf9f8  !important;
     color: #222 !important;
     border-radius: 0%;
     margin-bottom: 15px;
 }
 #product-btn{
-    width: 450px;
+    width: 400px;
     border-radius: 0px;
     margin-bottom: 10px;
 }
