@@ -28,6 +28,17 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
   };
   const gotoHome = () => {
     navigate("/");
+<<<<<<< HEAD
+=======
+  }
+  const search =(Event)=>{
+    if(Event.key === "Enter"){
+      //입력한 검색어를 읽어와서 
+      let keyword = Event.target.value
+      //url을 바꿔준다.
+      navigate(`/?q=${keyword}`)
+    }
+>>>>>>> a91401301387696477ad2ca13a62d54f9ab58717
   };
   return (
     <div className="nav">
@@ -76,9 +87,18 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
           <div className="search">
             <FontAwesomeIcon icon={faMagnifyingGlass} />
             <input type="text" placeholder="제품 검색" />
+=======
+          <div className='search'>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <input type="text" 
+          placeholder='제품 검색'
+          onKeyDown={(Event)=>search(Event)}
+          />
+>>>>>>> a91401301387696477ad2ca13a62d54f9ab58717
           </div>
         </div>
       </div>
