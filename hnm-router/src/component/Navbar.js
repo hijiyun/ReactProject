@@ -10,17 +10,27 @@ import { Navigate, useNavigate } from 'react-router-dom';
 
 
 
-const Navbar = () => {
-  const menuList = ['여성', 'Divided', '남성', '신생아/유아', '아동', 'H&M HOME', '스포츠', 'Sale', '지속가능성']
-  const navigate = useNavigate()
+const Navbar = ({ authenticate, setAuthenticate }) => {
+  const menuList = [
+    "여성",
+    "Divided",
+    "남성",
+    "신생아/유아",
+    "아동",
+    "H&M HOME",
+    "스포츠",
+    "Sale",
+    "지속가능성",
+  ];
+  const navigate = useNavigate();
   const gotoLogin = () => {
     navigate("/login");
-  }
+  };
   const gotoHome = () => {
     navigate("/");
-  }
+  };
   return (
-    <div className='nav'>
+    <div className="nav">
       <div className="nav-all">
         <div className="header-left">
           <button>고객서비스</button>&nbsp;&nbsp;
@@ -33,7 +43,7 @@ const Navbar = () => {
 
         <div className="nav-section">
           <img
-            className='logo'
+            className="logo"
             width={50}
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/1280px-H%26M-Logo.svg.png"
             alt="hnm로고"
@@ -42,9 +52,15 @@ const Navbar = () => {
         </div>
 
         <div className="header-right">
-          <div className="header-jump" onClick={gotoLogin}>
-            <FontAwesomeIcon icon={faUser} /> <button> 로그인 </button>
-          </div>
+          {authenticate ? (
+            <div className="header-jump" onClick={() => setAuthenticate(false)}>
+              <FontAwesomeIcon icon={faUser} /> <button> 로그아웃 </button>
+            </div>
+          ) : (
+            <div onClick={() => navigate("/login")}>
+              <FontAwesomeIcon icon={faUser} /> <button> 로그인 </button>
+            </div>
+          )}
           <div className="header-jump">
             <FontAwesomeIcon icon={faHeart} /> <button>즐겨찾기</button>
           </div>
@@ -60,13 +76,14 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
-          <div className='search'>
-          <FontAwesomeIcon icon={faMagnifyingGlass} /><input type="text" placeholder='제품 검색' />
+          <div className="search">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+            <input type="text" placeholder="제품 검색" />
           </div>
         </div>
-        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Navbar
