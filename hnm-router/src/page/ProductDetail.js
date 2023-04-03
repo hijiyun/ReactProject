@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Col, Container, Row } from "react-bootstrap";
 
 const ProductDetail = () => {
-  let { id } = useParams();
+  let {id} = useParams();
   const [product, setProduct] = useState(null);
   const getProductDetail = async() => {
     let url = `https://my-json-server.typicode.com/legobitna/hnm-react-router/products/${id}`;
@@ -18,11 +18,11 @@ const ProductDetail = () => {
   return (
     <Container>
       <Row>
-        <Col>
+        <Col className="product-img">
           <img src={product?.img} alt="이미지 사진" />
         </Col>
 
-        <Col>
+        <Col className="product-content">
           <div>{product?.title}</div>
           <div>₩{product?.price}</div>
         </Col>

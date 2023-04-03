@@ -108,3 +108,14 @@ li{
     width: 300px;
     justify-content: center;
 }
+
+.product-img{
+    display: flex;
+    justify-content: flex-end;
+    border: 1px solid red;
+
+}
+
+.product-content{
+    border: 1px solid red;
+}
