@@ -20,7 +20,7 @@ const ProductDetail = () => {
   useEffect(() => {
     getProductDetail(); // eslint-disable-next-line
   }, []);
-  if (loading || product == null) return <h1>Loading</h1>;
+  if (loading || product == null) return <h1 className='loading'>Loading</h1>;
   return (
     // <Container>
     //   {error ? (
@@ -66,14 +66,14 @@ const ProductDetail = () => {
           {error}
         </Alert>
       ) : (
-        <Row>
-          <Col className="product-detail-img">
+        <Row className="product-all">
+          <Col className="product-img">
             <img src={product?.img} alt="img" />
           </Col>
-          <Col>
-            <div className="product-info">{product.title}</div>
-            <div className="product-info">₩ {product.price}</div>
-            <div className="choice">
+          <Col className="product-content">
+            <div>{product.title}</div>
+            <div>₩ {product.price}</div>
+            <div className="product-choice">
               {product.choice ? "Conscious choice" : ""}
             </div>
             <Dropdown className="drop-down">

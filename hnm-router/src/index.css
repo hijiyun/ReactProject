@@ -5,6 +5,12 @@ body{
   color: #222;
 }
 
+.loading{
+  display: flex;
+  justify-content: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
 .nav-all{
   position: relative;
 }
