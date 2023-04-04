@@ -39,7 +39,7 @@ const ProductAll = () => {
       ) : (
           <Row>
             {productList.length > 0 &&
-             productList.map((menu)=>(
+              productList.map((menu)=>(
             <Col lg={3} sm={12} key={menu.id}> 
               <ProductCard item={menu}/> 
             </Col>

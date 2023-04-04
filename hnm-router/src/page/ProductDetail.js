@@ -6,10 +6,8 @@ import Button from 'react-bootstrap/Button';
 
 const ProductDetail = () => {
   let { id } = useParams();
-  const [size, setSize] = useState(false); 
-  console.log("size",size)
-  const [product, setProduct] = useState(null);
-  const [loading, setLoading] = useState(false);
+  const [product, setProduct] = useState(null); 
+  const [loading, setLoading] = useState(false); // eslint-disable-next-line
   const [error, setError] = useState("");
   const getProductDetail = async () => {
     setLoading(true);
@@ -18,46 +16,84 @@ const ProductDetail = () => {
     let data = await response.json();
     setLoading(false);
     setProduct(data);
-  }
+  };
   useEffect(() => {
-    getProductDetail();
-  }, [])
+    getProductDetail(); // eslint-disable-next-line
+  }, []);
+  if (loading || product == null) return <h1>Loading</h1>;
   return (
-    <Container>
-      {error ? (
-        <Alert variant="danger">{error}</Alert>
-      ) : (
-        <Row className="product-all">
-          <Col className="product-img">
-            <img src={product?.img} alt="이미지 사진" />
-          </Col>
+    // <Container>
+    //   {error ? (
+    //     <Alert variant="danger">{error}</Alert>
+    //   ) : (
+    //     <Row className="product-all">
+    //       <Col className="product-img">
+    //         <img src={product?.img} alt="이미지 사진" />
+    //       </Col>
 
-          <Col className="product-content">
-            <h3>{product?.title}</h3>
-            <h5>₩{product?.price}</h5>
-            <div className="product-choice">
-              {product?.choice ? "Conscious choice" : ""}
+    //       <Col className="product-content">
+    //         <h3>{product?.title}</h3>
+    //         <h5>₩{product?.price}</h5>
+    //         <div className="product-choice">
+    //           {product?.choice ? "Conscious choice" : ""}
+    //         </div>
+    //         <Dropdown>
+    //           <Dropdown.Toggle variant="dark" id="dropdown-basic">
+    //             사이즈 선택
+    //           </Dropdown.Toggle>
+
+    //           <Dropdown.Menu>
+    //             {product?.size.length > 0 &&
+    //               product.size.map((item) => (
+    //                 <Dropdown.Item href="#/action-1">
+    //                   { item }
+    //                 </Dropdown.Item>
+    //               ))}
+    //           </Dropdown.Menu>
+    //         </Dropdown>
+
+    //         <Button id="product-btn" variant="dark">
+    //           추가
+    //         </Button>
+    //       </Col>
+    //     </Row>
+    //   )}
+    //   ;
+    // </Container>
+    <Container className="product-detail-card">
+      {error ? (
+        <Alert variant="danger" className="text-center">
+          {error}
+        </Alert>
+      ) : (
+        <Row>
+          <Col className="product-detail-img">
+            <img src={product?.img} alt="img" />
+          </Col>
+          <Col>
+            <div className="product-info">{product.title}</div>
+            <div className="product-info">₩ {product.price}</div>
+            <div className="choice">
+              {product.choice ? "Conscious choice" : ""}
             </div>
-            <Dropdown>
-              <Dropdown.Toggle variant="dark" id="dropdown-basic" >
+            <Dropdown className="drop-down">
+              <Dropdown.Toggle variant="outline-dark" id="dropdown-basic">
                 사이즈 선택
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
                 {product?.size.length > 0 &&
                   product.size.map((item) => (
-                    <Dropdown.Item href="#/action-1" onClick={()=>setSize(false)}>{item}</Dropdown.Item>
+                    <Dropdown.Item href="#/action-1">{item}</Dropdown.Item>
                   ))}
               </Dropdown.Menu>
             </Dropdown>
-
             <Button id="product-btn" variant="dark">
               추가
             </Button>
           </Col>
         </Row>
       )}
-      ;
     </Container>
   );
 };

@@ -26,7 +26,7 @@ const choice = {
 function App() {
   const [userSelect, setUserSelect] = useState();
   const [computerSelect, setComputerSelect] = useState(null);
-  const [result, setResult] = useState("");
+  const [result, setResult] = useState(""); 
   
   const play = (userChoice) => { //userChoice 는 버튼 온클릭 옆에 있는 매개변수(rock,scissors,paper)를 받을게 필요해서 만든거임
     setUserSelect(choice[userChoice]); // setUserSelect = choice에서 userChoice를 들고오는 거임
