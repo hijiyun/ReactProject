@@ -1,7 +1,9 @@
 
 
 let initialState ={
-    count:0
+    count:0,
+    id: '',
+    password:''
 }
 
 function reducer(state = initialState, action){
@@ -16,6 +18,8 @@ function reducer(state = initialState, action){
             return{...state, count: state.count + action.payload.num};
         case "LOGIN":
             return{...state, id:action.payload.id,password:action.payload.password}
+        case "DECREAMENT":
+            return{...state, count:state.count - action.payload.num}
         default:
             return{...state};
     }
