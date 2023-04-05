@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col, Row } from 'react-bootstrap'
 
-const ContactItem = () => {
+const ContactItem = (item) => {
   return (
     <div>
       <Row>
@@ -11,8 +11,8 @@ const ContactItem = () => {
           src="https://i1.sndcdn.com/avatars-000373844735-9n06kq-t240x240.jpg" alt="unknown person" />
         </Col>
         <Col lg={11}>
-          <div>박지윤</div>
-          <div>01077973706</div>
+          <div>{ item.name }</div>
+          <div>{ item.phoneNumber }</div>
         </Col>
       </Row>
     </div>
