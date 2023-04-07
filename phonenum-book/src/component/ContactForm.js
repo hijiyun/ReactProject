@@ -15,9 +15,9 @@ const ContactForm = () => {
       alert('이미 추가된 연락처입니다.');
     } else {
       dispatch({ type: "ADD_CONTACT", payload: { name:name, phoneNumber:phoneNumber } });
+      console.log(name,phoneNumber)
       setName("");
       setPhoneNumber("");
-      console.log(name,phoneNumber)
     }
   }
     
