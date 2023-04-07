@@ -24,7 +24,7 @@ const SearchBox = () => {
                 />
             </Col>
             <Col lg={2}>
-                <Button>찾기</Button>
+                <Button type="submit">찾기</Button>
             </Col>
         </Row>
       </div>

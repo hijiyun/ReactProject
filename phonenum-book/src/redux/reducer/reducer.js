@@ -2,7 +2,7 @@
 
 const initialState ={
     contact:[],
-    keyword: " " //state 새로 추가
+    keyword: "" //state 새로 추가
 };
 
 const contactReducer = (state = initialState, action) => {

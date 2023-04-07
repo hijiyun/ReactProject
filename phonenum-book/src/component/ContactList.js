@@ -16,7 +16,6 @@ const ContactList = () => {
     }
   }),[keyword])
 
-  const contactList = useSelector(state => state.contactList)
   return (
     <div>
       <SearchBox />
