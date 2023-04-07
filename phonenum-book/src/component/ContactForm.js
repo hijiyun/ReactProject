@@ -1,19 +1,26 @@
 import React, { useState } from 'react'
 import { Button, Form } from 'react-bootstrap';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const ContactForm = () => {
   const [name, setName] = useState('');
   const [phoneNumber, setPhoneNumber] = useState(0);
+  const {contact} = useSelector(state => state)
   const dispatch = useDispatch();
 
   const addContact = (event) => {
     event.preventDefault();
-    dispatch({ type: "ADD_CONTACT", payload: { name:name, phoneNumber:phoneNumber } });
-    setName("");
-    setPhoneNumber("");
-    console.log("찍ㅎ나?")
+    // 중복 체크
+    if (contact.find((item) => item.name === name || item.phoneNumber === phoneNumber)) {
+      alert('이미 추가된 연락처입니다.');
+    } else {
+      dispatch({ type: "ADD_CONTACT", payload: { name:name, phoneNumber:phoneNumber } });
+      setName("");
+      setPhoneNumber("");
+      console.log(name,phoneNumber)
+    }
   }
+    
 
   return (
     <div>
