@@ -1,5 +1,3 @@
-
-
 const initialState ={
     contact:[],
     keyword: "" //state 새로 추가
