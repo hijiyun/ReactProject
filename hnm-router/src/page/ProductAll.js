@@ -3,12 +3,17 @@ import ProductCard from '../component/ProductCard';
 import {Col, Container, Row, Alert} from "react-bootstrap";
 import { useSearchParams } from 'react-router-dom';
 import {productAction} from "../redux/actions/productAction"
+import { useDispatch , useSelector} from "react-redux";
 
 const ProductAll = () => {
-  const [productList, setProductList] = useState([]);
+  const dispatch = useDispatch()  
+  const productList = useSelector((state) => state.productList)
   const [qurry, setQurry] = useSearchParams();
   let [error, setError] = useState("");
   const getProducts = async()=>{
+    let searchQuerry = qurry.get('q') || "";
+    console.log("쿼리값은? ", searchQuerry)
+    dispatch(productAction.getProducts({searchQuerry, setQurry, setError}))
 };
   useEffect(()=>{
     getProducts()
