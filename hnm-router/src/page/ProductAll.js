@@ -7,7 +7,7 @@ import { useDispatch , useSelector} from "react-redux";
 
 const ProductAll = () => {
   const dispatch = useDispatch()  
-  const productList = useSelector((state) => state.productList)
+  const productList = useSelector((state) => state.product.productList)
   const [qurry, setQurry] = useSearchParams();
   let [error, setError] = useState("");
   const getProducts = async()=>{
