@@ -61,7 +61,6 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
         <div className="header-right">
           {authenticate ? (
-            //<div className="header-jump" onClick={()=>setAuthenticate(false)}>
             <div className="header-jump" onClick={()=>setAuthenticate(false)}>
               <FontAwesomeIcon icon={faUser} /> <button> 로그아웃 </button>
             </div>
