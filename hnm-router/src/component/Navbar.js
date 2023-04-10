@@ -37,10 +37,6 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
       navigate(`/?q=${keyword}`)
     }
   };
-
-    const handleLogout = () => {
-      setAuthenticate(false);
-    };
   return (
     <div className="nav">
       <div className="nav-all">
@@ -65,8 +61,8 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
         <div className="header-right">
           {authenticate ? (
-            //<div className="header-jump" onClick={() => setAuthenticate(false)}>
-            <div className="header-jump" onClick={handleLogout}>
+            //<div className="header-jump" onClick={()=>setAuthenticate(false)}>
+            <div className="header-jump" onClick={()=>setAuthenticate(false)}>
               <FontAwesomeIcon icon={faUser} /> <button> 로그아웃 </button>
             </div>
           ) : (
