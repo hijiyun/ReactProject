@@ -14,6 +14,9 @@ const Login = ({ setAuthenticate }) => {
     console.log("login user function issue");
     dispatch(authenticateAction.login(id, password))
     navigate("/");
+
+
+    
   };
   return (
     <div>
