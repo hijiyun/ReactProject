@@ -7,10 +7,15 @@ import { faBell } from "@fortawesome/free-solid-svg-icons";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 //eslint-disable-next-line 
 import { Navigate, useNavigate } from 'react-router-dom'; 
-
+import {useDispatch} from "react-redux"
+import { authenticateAction } from "../redux/actions/authenticateAction";
 
 
 const Navbar = ({ authenticate, setAuthenticate }) => {
+  const dispatch = useDispatch()
+  const Logout =()=>{
+    dispatch(authenticateAction.login(authenticate))
+  }
   const menuList = [
     "여성",
     "Divided",
@@ -61,7 +66,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
         <div className="header-right">
           {authenticate ? (
-            <div className="header-jump" onClick={()=>setAuthenticate(false)}>
+            <div className="header-jump" onClick={Logout}>
               <FontAwesomeIcon icon={faUser} /> <button> 로그아웃 </button>
             </div>
           ) : (
