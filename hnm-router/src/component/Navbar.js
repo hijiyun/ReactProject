@@ -11,10 +11,10 @@ import {useDispatch} from "react-redux"
 import { authenticateAction } from "../redux/actions/authenticateAction";
 
 
-const Navbar = ({ authenticate, setAuthenticate }) => {
+const Navbar = ({ authenticate, id, password }) => {
   const dispatch = useDispatch()
   const Logout =()=>{
-    dispatch(authenticateAction.login(authenticate))
+    dispatch(authenticateAction.login(id, password, authenticate))
   }
   const menuList = [
     "여성",
