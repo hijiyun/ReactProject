@@ -11,7 +11,7 @@ function authenticateReducer(state=initialstate, action){
         case "LOGIN_SUCCESS":
             return{...state, id:payload.id,password:payload.password,authenticate:true};
         case "LOGIN_FAIL":
-            return {...state, authenticate:false}
+            return {...state, id:payload.id,password:payload.password,authenticate:false}
         default: 
         return {...state};
     }
