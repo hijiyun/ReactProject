@@ -3,6 +3,8 @@ import './App.css';
 import Home from "./page/Home"
 import Movie from "./page/Movie"
 import MovieDetail from "./page/MovieDetail"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navigation from './components/Navigation';
 
 //1. 3개 페이지 필요 [홈페이지 , 영화페이지 , 영화 디테일페이지]
 //2. 홈페이지에서 영화 베너들을 볼 수 있다.
@@ -22,6 +24,7 @@ import MovieDetail from "./page/MovieDetail"
 function App() {
   return (
     <div>
+      <Navigation />
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/Movie' element={<Movie/>}/>

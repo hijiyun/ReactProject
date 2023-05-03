@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 
 const Home = () => {
   return (
+    useEffect(()=>{
+
+    },[])
     <div>Home</div>
   )
 }
