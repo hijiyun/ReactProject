@@ -2,8 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Home from "./page/Home"
 import Movie from "./page/Movie"
-import MovieDetail from "./page/MovieDtail"
-import {Routes, Route} from "react-router-dom"
+import MovieDetail from "./page/MovieDetail"
 
 //1. 3개 페이지 필요 [홈페이지 , 영화페이지 , 영화 디테일페이지]
 //2. 홈페이지에서 영화 베너들을 볼 수 있다.
