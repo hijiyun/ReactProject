@@ -5,7 +5,7 @@ import {useDispatch} from "react-redux"
 const Home = () => {
   const dispatch = useDispatch();
     useEffect(()=>{
-      dispatch(movieAction.getMovies())
+      dispatch(movieAction.getMovies() )
     },[])
     return <div>Home</div>
 }
