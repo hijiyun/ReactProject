@@ -26,9 +26,9 @@ function App() {
     <div>
       <Navigation />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/Movie' element={<Movie/>}/>
-        <Route path='/Movie/:id' element={<MovieDetail/>}/>
+        <Route path='/' element={<Home />}/>
+        <Route path='/Movies' element={<Movie />}/>
+        <Route path='/Movies/:id' element={<MovieDetail />}/>
       </Routes>
     </div>
   );
