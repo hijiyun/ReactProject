@@ -8,7 +8,7 @@ const Home = () => {
   const {popularMovies, topRatedMovies, upcomingMovies} = useSelector(
     (state) => state.movie
     )
-  console.log("Home?", popularMovies)
+    console.log("popular",popularMovies)
     useEffect(()=>{
       dispatch(movieAction.getMovies())
     },[])
