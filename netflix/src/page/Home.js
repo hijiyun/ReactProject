@@ -6,7 +6,7 @@ import Banner from "../components/Banner"
 const Home = () => {
   const dispatch = useDispatch();
   const {popularMovies, topRatedMovies, upcomingMovies} = useSelector(
-    (state) => state.movie
+    (state) => state.movie  
     )
     console.log("popular",popularMovies)
     useEffect(()=>{

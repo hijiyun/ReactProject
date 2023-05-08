@@ -7,7 +7,7 @@ let initialState ={
 function movieReducer(state=initialState, action){
     let {type, payload} = action
     switch(type){
-        case "GET_MOVIE_SUCCESS":
+        case "GET_MOVIES_SUCCESS":
             return {...state,popularMovies:payload.popularMovies 
                             ,topRatedMovies:payload.topRatedMovies
                             , upcomingMovies:payload.upcomingMovies };
