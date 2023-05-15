@@ -15,7 +15,6 @@ const Home = () => {
     return (
     <div>
         {popularMovies.results && <Banner movie={popularMovies.results[0]} />}
-        dkssud
     </div>
     );
 }
