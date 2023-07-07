@@ -19,9 +19,8 @@ const Box = (props) => {
     <div className={`box ${result}`}>
       <h1>{props.title}</h1>
       <h2 data-testid="item-name">{props.item?.name}</h2>
-      <img className="item-img" src={props.item?.img}
-      alt="아이템이미지"/>
-      v<h2>{result}</h2>
+      <img className="item-img" src={props.item?.img} alt="아이템이미지"/>
+      <h2>{result}</h2>
     </div>
   );
 };
